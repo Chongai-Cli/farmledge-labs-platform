@@ -1,9 +1,10 @@
-import express from 'express';
+import express from 'express'
+import { router } from './routes/index.js'
 
-const app = express();
+const app = express()
 
-app.use(express.json());
+app.use(express.json())
+app.get('/health', (_, res) => res.json({ status: 'ok' }))
+app.use(router)
 
-// TODO: wire routes here
-
-export default app;
+export default app
