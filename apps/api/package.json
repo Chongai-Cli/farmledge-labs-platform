@@ -8,6 +8,7 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
+    "test": "tsx --test tests/*.test.ts",
     "lint": "eslint src --ext .ts"
   },
   "dependencies": {
